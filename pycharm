@@ -1,0 +1,22 @@
+from tkinter import *
+win = Tk()
+win.geometry("300*200+10+20")
+win.title("Welcome to python")
+
+
+# Button widgets
+btn = Button(win, text = "This is a button", fg = "Orange", bg = "Blue", bd=15)
+btn.place(x=50, y =50)
+
+
+# label Widget
+lbl = Label(win, text = "This is a label", fg = "blue", bg = "yellow")
+lbl.place(x=50, y = 10)
+
+
+# text field
+txt = Entry(win, font= ("Verdana", 12), bd = 5)
+txt.place (x=50, y = 130)
+
+
+win.mainloop()
