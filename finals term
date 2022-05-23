@@ -1,0 +1,58 @@
+from tkinter import *
+
+window = Tk()
+window.title("Finding Smallest Number")
+window.geometry("500x300+20+100")
+
+def findSmallest():
+    L = []
+
+    L.append(eval(Num1.get()))
+
+    L.append(eval(Num2.get()))
+
+    L.append(eval(Num3.get()))
+
+    LNum.set(min(L))
+
+#labels
+
+lbl1 = Label(window, text = "Find the least number among three numbers",justify='center')
+lbl1.grid(column=1,row=0,pady=5)
+
+lbl2 = Label(window,text = "First number:")
+lbl2.grid(column = 0,row=1,sticky=W,pady=6, padx=6)
+
+lbl3 = Label(window,text = "Second number:")
+lbl3.grid(column=0,row=2,  pady=6, padx=6)
+
+lbl4 = Label(window,text="Third number:")
+lbl4.grid(column =0,row=3,sticky=W, pady=6, padx=6)
+
+lbl5 = Label(window,text="The smallest number:")
+lbl5.grid(column=0,row=5,sticky=W, pady=6, padx=6)
+
+#entry
+
+Num1 = StringVar()
+entr1 = Entry(window,bd=3,textvariable=Num1)
+entr1.grid(column = 1,row=1,pady=6, padx=6)
+
+Num2=StringVar()
+entr2 = Entry(window,bd=3,textvariable=Num2)
+entr2.grid(column=1,row=2, pady=6, padx=6)
+
+Num3 = StringVar()
+entr3 = Entry(window,bd=3,textvariable=Num3)
+entr3.grid( column=1,row=3, pady=6, padx=6)
+
+LNum = StringVar()
+entr4 = Entry(window,bd=3,state="readonly",textvariable=LNum)
+entr4.grid(column=1,row=5, pady=6, padx=6)
+
+#button
+
+btn1 = Button(window,text = "The smallest number among the three is:",command = findSmallest)
+btn1.grid( column = 1,row=4, pady=6, padx=6)
+
+mainloop()
